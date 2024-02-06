@@ -7916,7 +7916,7 @@ GGML_CALL void ggml_init_cublas() {
 
             // create cublas handle
             CUBLAS_CHECK(cublasCreate(&g_cublas_handles[id]));
-            CUBLAS_CHECK(cublasSetMathMode(g_cublas_handles[id], CUBLAS_TF32_TENSOR_OP_MATH));
+            CUBLAS_CHECK(cublasSetMathMode(g_cublas_handles[id], CUBLAS_TENSOR_OP_MATH));
         }
 
         // configure logging to stdout
